@@ -3,11 +3,19 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import MyComponent from './Components/MyComponent';
+import { MyProvider } from './Components/Comp';
+import Abc from './Components/abc';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+    {/* <MyProvider > */}
     <App />
+    {/* <MyComponent /> */}
+    {/* <Abc /> */}
+    {/* </MyProvider> */}
+    {/* <App /> */}
   </React.StrictMode>
 );
 

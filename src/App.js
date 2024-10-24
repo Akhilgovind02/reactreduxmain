@@ -1,24 +1,26 @@
 import logo from './logo.svg';
+import { Provider } from 'react-redux';
+import store from './Store/store';
+import Counter from './Components/Counter';
+import COunt from './Components/COunt';
+import { BrowserRouter as Router, Route,Routes } from 'react-router-dom'
+import Abc from './Abc';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    
+    <Provider store={store}>
+    <div>
+    <h1>Redux Counter App</h1>
+      <Router>
+      <Routes>
+        <Route path='/show' element={<COunt />}></Route>
+        <Route path='/count' element={<Counter />}></Route>
+      </Routes>
+      </Router>
     </div>
+ </Provider>
   );
 }
 
